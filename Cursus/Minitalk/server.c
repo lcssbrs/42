@@ -1,10 +1,3 @@
-//write a program called server from the minitalk project of 42 cursus
-//this program will receive a string from the client and print it
-//the string will be sent as a series of bits
-//the server will print the string when it receives the end of transmission signal
-//the server will print the string in the same order as it was sent
-//write it with the 42 norm
-//the server will be able to receive strings from multiple clients in the same time
 
 #include "minitalk.h"
 
@@ -83,9 +76,9 @@ int	main(void)
 
     pid = getpid();
     ft_putnbr(pid);
-    ft_putchar('\n');
     signal(SIGUSR1, ft_sig_handler);
     signal(SIGUSR2, ft_sig_handler);
+    ft_putchar('\n');
     while (1)
         pause();
     return (0);

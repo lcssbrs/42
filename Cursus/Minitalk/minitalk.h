@@ -1,13 +1,4 @@
-//write a header called minitalk.h from the minitalk project of 42 cursus
-//this header will contain all the prototypes of the functions used in the project
-//write it with the 42 norm
-//the header will be included in both the client and the server
-//the header will be protected from double inclusion
-//the header will be in the same directory as the client and the server
-//use the client and server snippets to test your header
-//submit the header file only
 
-// Path: Cursus/Minitalk/minitalk.h
 
 #ifndef MINITALK_H
 # define MINITALK_H

@@ -1,11 +1,3 @@
-//write a program called client from the minitalk project of 42 cursus
-//this program will send a string to the server
-//the string will be sent as a series of bits
-//the server will print the string when it receives the end of transmission signal
-//the server will print the string in the same order as it was sent
-//write it with the 42 norm
-//the server will be able to receive strings from multiple clients in the same time
-//the client will be able to send strings to multiple servers in the same time
 
 #include "minitalk.h"
 
