@@ -1,55 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lseiberr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/04 15:52:23 by lseiberr          #+#    #+#             */
+/*   Updated: 2023/07/04 15:52:29 by lseiberr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "minitalk.h"
-
-void	ft_putnbr(int n)
-{
-    char	c;
-
-    if (n < 0)
-    {
-        write(1, "-", 1);
-        n = -n;
-    }
-    if (n >= 0 && n <= 9)
-    {
-        c = n + '0';
-        write(1, &c, 1);
-    }
-    else
-    {
-        ft_putnbr(n / 10);
-        ft_putnbr(n % 10);
-    }
-}
-
-void	ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-    int	i;
-
-    i = 0;
-    while (str[i])
-    {
-        ft_putchar(str[i]);
-        i++;
-    }
-}
-
-void	ft_putendl(char *str)
-{
-    ft_putstr(str);
-    ft_putchar('\n');
-}
-
-void	ft_error(char *str)
-{
-    ft_putendl(str);
-    exit(1);
-}
 
 int	ft_atoi(const char *str)
 {
@@ -83,9 +44,9 @@ void	ft_send_char(int pid, char c)
     while (i < 8)
     {
         if (c & 1)
-            kill(pid, SIGUSR1);
-        else
             kill(pid, SIGUSR2);
+        else
+            kill(pid, SIGUSR1);
         c = c >> 1;
         i++;
         usleep(100);

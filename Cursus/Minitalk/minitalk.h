@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lseiberr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/04 15:52:45 by lseiberr          #+#    #+#             */
+/*   Updated: 2023/07/04 15:52:47 by lseiberr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 
 #ifndef MINITALK_H
@@ -16,9 +28,5 @@ void	ft_send_str(int pid, char *str);
 void	ft_sig_handler(int sig);
 void	ft_send_char(int pid, char c);
 int ft_atoi(const char *str);
-void	ft_print_char(char c);
-void	ft_print_str(char *str);
-void	ft_print_int(int n);
-int	ft_atoi(const char *str);
 
 #endif
